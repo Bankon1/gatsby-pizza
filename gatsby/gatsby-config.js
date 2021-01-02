@@ -8,6 +8,7 @@ export default {
     title: `Slicks Slices`,
     siteUrl: `https://gatby.pizza`,
     description: `This is the best Pizza in Malta`,
+    twitter: `@slicksSlices`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -20,5 +21,6 @@ export default {
         token: process.env.SANITY_TOKEN,
       },
     },
+    'gatsby-plugin-react-helmet',
   ],
 };
