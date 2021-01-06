@@ -33,6 +33,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// Little function that makes you wait
 function wait(ms = 0) {
   return new Promise((resolve, reject) => {
     setTimeout(resolve, ms);
@@ -42,6 +43,14 @@ function wait(ms = 0) {
 exports.handler = async (event, context) => {
   const body = JSON.parse(event.body);
   console.log(body);
+
+  // Check if they have filled out the honeypot
+  if (body.mapleSyrup) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ message: 'Boop Beep bop zzssst good bye' }),
+    };
+  }
   // Validate the data coming in is correct
   const requiredFields = ['email', 'name', 'order'];
 
