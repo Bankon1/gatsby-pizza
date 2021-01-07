@@ -42,7 +42,6 @@ function wait(ms = 0) {
 
 exports.handler = async (event, context) => {
   const body = JSON.parse(event.body);
-  console.log(body);
 
   // Check if they have filled out the honeypot
   if (body.mapleSyrup) {

@@ -46,7 +46,6 @@ export default function OrderPage({ data }) {
               id="name"
               type="text"
               name="name"
-              className="mapleSyrup"
               value={values.name}
               onChange={updateValue}
             />
@@ -62,6 +61,7 @@ export default function OrderPage({ data }) {
             />
             <input
               id="mapleSyrup"
+              className="mapleSyrup"
               type="text"
               name="mapleSyrup"
               value={values.mapleSyrup}
