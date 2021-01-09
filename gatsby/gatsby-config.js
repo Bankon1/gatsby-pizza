@@ -22,5 +22,12 @@ export default {
       },
     },
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        // eslint-disable-next-line global-require
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
+      },
+    },
   ],
 };
