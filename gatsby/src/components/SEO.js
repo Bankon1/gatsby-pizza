@@ -25,6 +25,7 @@ const SEO = ({ children, location, description, title, image }) => {
       <link rel="alternate icon" href="/favicon.ico" />
       {/* Meta Tags */}
       <meta name="viewport" content="width=device-width,inital-scale=1.0" />
+      <meta charSet="utf8" />
       <meta name="description" content={site.siteMetadata.description} />
       {/* Open Graph */}
       {location && <meta property="og:href" content={location.href} />}
