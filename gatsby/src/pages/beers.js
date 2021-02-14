@@ -46,7 +46,7 @@ export default function BeersPage({ data }) {
                 <span style={{ filter: `grayscale(100%)` }}>
                   {`⭐️`.repeat(5 - rating)}
                 </span>
-                <span>({beer.rating.reviews})</span>
+                <span>({beer.rating?.reviews})</span>
               </p>
             </SingleBeerStyles>
           );
